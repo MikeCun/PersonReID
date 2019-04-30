@@ -89,7 +89,7 @@ class ReIDTrainer(object):
         print('=> Experiment Output Directory: {}'.format(self.cfg.log.exp_dir))
         import torch
         print('[PYTORCH VERSION]:', torch.__version__)
-        cfg.ckpt_file = osp.join(cfg.exp_dir, 'ckpt.pth')
+        cfg.ckpt_file = osp.join(cfg.exp_dir, 'ckpt.pth.tar')
         if cfg.use_tensorboard:
             from tensorboardX import SummaryWriter
             self.tb_writer = SummaryWriter(log_dir=osp.join(cfg.exp_dir, 'tensorboard'))
