@@ -86,7 +86,6 @@ class ReIDTrainer(object):
         time_str = t_str()
         ReDirectSTD(osp.join(cfg.exp_dir, 'stdout_{}.txt'.format(time_str)), 'stdout', True)
         ReDirectSTD(osp.join(cfg.exp_dir, 'stderr_{}.txt'.format(time_str)), 'stderr', True)
-        print('=> Experiment Output Directory: {}'.format(self.cfg.log.exp_dir))
         import torch
         print('[PYTORCH VERSION]:', torch.__version__)
         cfg.ckpt_file = osp.join(cfg.exp_dir, 'ckpt.pth.tar')
