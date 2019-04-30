@@ -20,7 +20,6 @@ from ..utils.cfg import overwrite_cfg_file
 from ..utils.torch_utils import get_default_device
 from ..utils.torch_utils import load_ckpt, save_ckpt
 from ..utils.torch_utils import get_optim_lr_str
-from ..utils.log import ReDirectSTD
 from ..utils.log import time_str as t_str
 from ..utils.log import join_str
 from ..data.dataloader import create_dataloader
@@ -84,8 +83,6 @@ class ReIDTrainer(object):
         cfg = self.cfg.log
         # Redirect logs to both console and file.
         time_str = t_str()
-        ReDirectSTD(osp.join(cfg.exp_dir, 'stdout_{}.txt'.format(time_str)), 'stdout', True)
-        ReDirectSTD(osp.join(cfg.exp_dir, 'stderr_{}.txt'.format(time_str)), 'stderr', True)
         import torch
         print('[PYTORCH VERSION]:', torch.__version__)
         cfg.ckpt_file = osp.join(cfg.exp_dir, 'ckpt.pth.tar')
