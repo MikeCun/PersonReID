@@ -24,7 +24,6 @@ class Model(BaseModel):
         if cfg.use_ps:
             cfg.ps_head.in_c = self.backbone.out_c
             self.ps_head = PartSegHead(cfg.ps_head)
-        print('Model Structure:\n{}'.format(self))
 
     def create_em_list(self):
         cfg = self.cfg
