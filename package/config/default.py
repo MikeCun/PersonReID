@@ -125,7 +125,7 @@ cfg.cd_ps_loss.normalize_size = True
 cfg.cd_ps_loss.num_classes = cfg.model.ps_head.num_classes
 
 cfg.log = EasyDict()
-cfg.log.use_tensorboard = True
+cfg.log.use_tensorboard = False
 
 cfg.optim = EasyDict()
 cfg.optim.optimizer = 'sgd'
