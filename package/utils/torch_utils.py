@@ -121,13 +121,10 @@ def load_ckpt(objects, ckpt_file, strict=True):
         if obj is not None:
             # Only nn.Module.load_state_dict has this keyword argument
             if not isinstance(obj, torch.nn.Module) or strict:
-                obj.load_state_dict(ckpt['state_dicts'][name])
+                obj.load_state_dict(ckpt['state_dict'][name])
             else:
-                load_state_dict(obj, ckpt['state_dicts'][name])
-    objects_str = ', '.join(objects.keys())
-    msg = '=> Loaded [{}] from {}, epoch {}, score:\n{}'.format(objects_str, ckpt_file, ckpt['epoch'], ckpt['score'])
-    print(msg)
-    return ckpt['epoch'], ckpt['score']
+                load_state_dict(obj, ckpt['state_dict'][name])
+    return ckpt['epoch']
 
 
 def save_ckpt(objects, epoch, score, ckpt_file):
