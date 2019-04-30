@@ -164,5 +164,4 @@ def get_resnet(cfg):
     if cfg.pretrained:
         state_dict = model_zoo.load_url(model_urls[cfg.name], model_dir=cfg.pretrained_model_dir)
         load_state_dict(model, state_dict)
-        print('=> Loaded ImageNet Model: {}'.format(osp.join(cfg.pretrained_model_dir, osp.basename(model_urls[cfg.name]))))
     return model
