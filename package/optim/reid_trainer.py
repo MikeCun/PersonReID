@@ -118,7 +118,7 @@ class ReIDTrainer(object):
 
     def init_infer(self):
         self.create_model()
-        self.load_items(model=True)
+        self.load_items()
 
     def load_items(self, model=False, optimizer=False, lr_scheduler=False):
         """To allow flexible multi-stage training."""
