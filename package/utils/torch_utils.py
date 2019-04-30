@@ -87,22 +87,6 @@ def load_state_dict(model, src_state_dict, fold_bnt=True):
             keys = [s for s in keys if not s.endswith('.num_batches_tracked')] + ['num_batches_tracked  x{}'.format(len(nbt_keys))]
         return keys
 
-    src_missing = set(dest_state_dict.keys()) - set(src_state_dict.keys())
-    if len(src_missing) > 0:
-        print("Keys not found in source state_dict: ")
-        if fold_bnt:
-            src_missing = _fold_nbt(src_missing)
-        for n in src_missing:
-            print('\t', n)
-
-    dest_missing = set(src_state_dict.keys()) - set(dest_state_dict.keys())
-    if len(dest_missing) > 0:
-        print("Keys not found in destination state_dict: ")
-        if fold_bnt:
-            dest_missing = _fold_nbt(dest_missing)
-        for n in dest_missing:
-            print('\t', n)
-
 
 def load_ckpt(objects, ckpt_file, strict=True):
     """Load state_dict's of modules/optimizers/lr_schedulers from file.
