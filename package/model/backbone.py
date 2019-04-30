@@ -1,4 +1,4 @@
-from resnet import get_resnet
+from .resnet import get_resnet
 
 
 backbone_factory = {
