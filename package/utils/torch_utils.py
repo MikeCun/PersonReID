@@ -76,7 +76,7 @@ def load_state_dict(model, src_state_dict, fold_bnt=True):
             param = param.data
         try:
             dest_state_dict[name].copy_(param)
-        except Exception, msg:
+        except (Exception, msg):
             print("Warning: Error occurs when copying '{}': {}".format(name, str(msg)))
 
     # New version of BN has buffer `num_batches_tracked`, which is not used
