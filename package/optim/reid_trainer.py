@@ -84,7 +84,6 @@ class ReIDTrainer(object):
         # Redirect logs to both console and file.
         time_str = t_str()
         import torch
-        print('[PYTORCH VERSION]:', torch.__version__)
         cfg.ckpt_file = osp.join(cfg.exp_dir, 'ckpt.pth.tar')
         if cfg.use_tensorboard:
             from tensorboardX import SummaryWriter
