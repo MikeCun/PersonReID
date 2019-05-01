@@ -6,6 +6,7 @@ import argparse
 import time
 from collections import OrderedDict
 import os
+import cv2
 import os.path as osp
 from copy import deepcopy
 from PIL import Image
@@ -197,7 +198,7 @@ class ReIDTrainer(object):
         transfer_items(getattr(cfg.dataset, 'test'), cfg.dataset)
         dic = {'im_path': im_path}
         if im is None:
-            dic['im'] = Image.open(im_path).convert("RGB")
+            dic['im'] = cv2.imread(im_path)
         else:
             assert F._is_pil_image(im), "Image should be PIL Image. Got {}".format(type(im))
             assert len(im.size) == 3, "Image should be 3-dimensional. Got size {}".format(im.size)
