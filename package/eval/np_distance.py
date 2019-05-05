@@ -19,6 +19,7 @@ def compute_dist(array1, array2, dist_type='cosine', cos_to_normalize=True):
     Returns:
         dist: numpy array with shape [m1, m2]
     """
+    array1 = np.nan_to_num(array1)
     if dist_type == 'cosine':
         if cos_to_normalize:
             array1 = normalize(array1, axis=1)
