@@ -1,6 +1,6 @@
 numpy
 scipy
-Pillow
+Pillow==4.3.0
 cython
 matplotlib
 scikit-image
@@ -17,6 +17,5 @@ tensorboardX>=1.5
 tqdm>=4.28.1
 torch
 torchvision
-datasketch
 progressbar2
 IPython[all]
