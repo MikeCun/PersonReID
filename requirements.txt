@@ -9,7 +9,6 @@ keras>=2.0.8
 opencv-python
 h5py
 imgaug
-uwsgi
 django==2.1.8
 dlib
 face_recognition
