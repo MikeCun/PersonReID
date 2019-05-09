@@ -10,7 +10,7 @@ opencv-python
 h5py
 imgaug
 uwsgi
-django
+django==2.1.8
 dlib
 face_recognition
 easydict>=1.9
