@@ -9,7 +9,6 @@ keras>=2.2.4
 opencv-python
 h5py
 imgaug
-django==2.1.8
 dlib
 face_recognition
 easydict>=1.9
