@@ -18,10 +18,8 @@
             <form method="post" action="/upload/" enctype="multipart/form-data">
               <label class="login-title">请上传待分析视频</label>
               <input type="file" name="reid_video" id="file" class="btn btn-default btn-block"><br>
-                    {% csrf_token %}
               <label class="login-title">请上传待再识别图片</label>
               <input type="file" name="reid_pic" id="file" class="btn btn-default btn-block"><br><br>
-                    {% csrf_token %}
                 <div class="row">
                     <div class="col-xs-12">
                     <input type="submit" name="submit" value="再  识  别  分  析" class="btn btn-primary btn-block">
