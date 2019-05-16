@@ -27,7 +27,7 @@ You will see the main system construction in the [demo.ipynb](https://github.com
 If you are using the web demo system, the main Rerson ReID service is written in the [service.py](https://github.com/MikeCun/PersonReID/blob/master/service.py).
 
 # Inference
-Now the inference is based on the Django Web Framework, we will provide the normal API in the feature.
+Now the inference is based on the Django Web Framework, we will provide the more general API in the feature.
 ```python
 from service import PersonReID
 
