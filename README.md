@@ -23,7 +23,7 @@ Download pre-trained EANet model (model_best.tar.pth) from the [Huanghoujing/EAN
 3.(Option) If you want to use the web demo, you need to build a Django web framework. You can use the Pycharm easily to build it up in the localhost, and you also can build it in the Server. Follow the installation, deploy this repository with Django on your host,  then you input the URL or domain name in the browser and you can see the demo system.
 
 # Getting Started
-You will see the main system construction in the [demo.ipynb](https://github.com/MikeCun/PersonReID/blob/master/demo.ipynb).
+You will see the main system construction in the [demo.ipynb](https://github.com/MikeCun/PersonReID/blob/master/demo.ipynb) which can be used in the colab.
 If you are using the web demo system, the main Rerson ReID service is written in the [service.py](https://github.com/MikeCun/PersonReID/blob/master/service.py).
 
 # Inference
