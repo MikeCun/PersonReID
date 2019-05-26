@@ -12,7 +12,7 @@ h5py
 imgaug
 dlib
 face_recognition
-easydic
+easydict
 scikit-learn
 tensorboardX
 tqdm
