@@ -59,7 +59,8 @@ def handle_uploaded_file(f):
     if not os.path.exists('./reid_query/'):
         os.makedirs('./reid_query/')
 
-    with open('./reid_query/' + f.name, 'wb+') as destination:
-        # Upload the file into 'reid_query' directory
-        for chunk in f.chunks():
-            destination.write(chunk)
+    if not os.path.exists('./reid_query/' + f.name):
+        with open('./reid_query/' + f.name, 'wb+') as destination:
+            # Upload the file into 'reid_query' directory
+            for chunk in f.chunks():
+                destination.write(chunk)
