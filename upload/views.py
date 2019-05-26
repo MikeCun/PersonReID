@@ -25,9 +25,9 @@ def upload_file(request):
         handle_uploaded_file(reid_pic_file)
 
         # ReID service
-        # reid_result = PersonReID(reid_video=os.path.join('reid_query', str(reid_video_file)),
-        #                          reid_pic=os.path.join('reid_query', str(reid_pic_file)))
-        # url, url_name = reid_result.reid_result()
+        reid_result = PersonReID(reid_video=os.path.join('reid_query', str(reid_video_file)),
+                                 reid_pic=os.path.join('reid_query', str(reid_pic_file)))
+        url, url_name = reid_result.reid_result()
 
     context = {'reid_url': zip(url, url_name)}  # API dictionary for showing ReID query result
 
