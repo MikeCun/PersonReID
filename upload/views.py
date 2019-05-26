@@ -54,6 +54,10 @@ def handle_uploaded_file(f):
     :param f: File which will be uploading
     :return: None
     """
+    
+    # For the first time to create the directory
+    if not os.path.exists('./reid_query/'):
+        os.makedirs('./reid_query/')
 
     with open('./reid_query/' + f.name, 'wb+') as destination:
         # Upload the file into 'reid_query' directory
