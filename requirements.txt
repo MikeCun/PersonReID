@@ -4,7 +4,7 @@ Pillow==4.3.0
 cython
 matplotlib
 scikit-image
-django==2.1.8
+django==2.2.10
 tensorflow>=1.8.0
 keras>=2.2.4
 opencv-python
